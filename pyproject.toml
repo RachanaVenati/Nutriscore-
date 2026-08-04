@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nutri-score"
+version = "0.1.0"
+description = "Nutri-Score multimodal sentiment analysis experiments and API."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "accelerate",
+    "datasets",
+    "diffusers",
+    "fastapi",
+    "matplotlib",
+    "pandas",
+    "pillow",
+    "python-multipart",
+    "requests",
+    "scikit-learn",
+    "seaborn",
+    "timm",
+    "torch",
+    "torchvision",
+    "tqdm",
+    "transformers",
+    "uvicorn[standard]",
+    "wandb",
+]
+
+[project.scripts]
+nutri-score-api = "nutri_score.api:main"
+nutri-score-base64 = "nutri_score.base64_conversion:main"
+nutri-score-evaluate = "nutri_score.evaluation:main"
+nutri-score-fusion = "nutri_score.training.fusion:main"
+nutri-score-llava-image = "nutri_score.inference.llava_image:main"
+nutri-score-text-baseline = "nutri_score.inference.text_baseline:main"
+nutri-score-train-clip = "nutri_score.training.clip_image_text:main"
+nutri-score-train-text = "nutri_score.training.text_roberta:main"
+nutri-score-train-vit = "nutri_score.training.image_vit:main"
+nutri-score-split = "nutri_score.split_train_val_test:main"
+
+[tool.setuptools.packages.find]
+include = ["nutri_score*"]

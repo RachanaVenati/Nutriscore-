@@ -1,0 +1,26 @@
+<View>
+    
+   <Header value="Post Mood Based on Image" />
+  <Image name="image" value="$filename"/>
+   <Choices name="post_mood_PNN" toName="image" choice="single" required="true">
+        <Choice value="positive"/>
+        <Choice value="Negative"/>
+        <Choice value="Neutral"/>
+    </Choices>
+  
+  <Header value="Post Mood Based on text" />
+  <Text name="text" value="$body"/>
+   <Choices name="post_mood_PNN_text" toName="text" choice="single" required="true">
+        <Choice value="positive"/>
+        <Choice value="Negative"/>
+        <Choice value="Neutral"/>
+    </Choices>
+  
+  <Header value="Post Mood Based on post" />
+  <Text name="ids" value="$id"/>
+  <Choices name="label_post" toName="ids" choice="single" required="true">
+        <Choice value="positive"/>
+        <Choice value="Negative"/>
+        <Choice value="Neutral"/>
+    </Choices>
+</View>
