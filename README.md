@@ -23,16 +23,6 @@ docs/presentations/       Project presentation files
 pyproject.toml            Package metadata, dependencies, and CLI entry points
 ```
 
-Large artifacts are intentionally excluded from GitHub:
-
-```text
-dataset/                  Local dataset CSVs downloaded from Kaggle
-models/                   Local model weights downloaded from Hugging Face
-outputs/                  Training outputs
-logs/                     Local logs
-wandb/                    Weights & Biases runs
-```
-
 ## Reproducibility
 
 This project is reproducible, but not from the GitHub repository alone. To reproduce the training and inference workflow, clone the repository, install the package, then download the dataset from Kaggle and the trained model weights from Hugging Face.
